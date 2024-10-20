@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0285FF",
+              secondary: "#20283F",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div
+      class="flex items-center justify-between xl:px-32 sm:px-5 px-2 bg-secondary"
+    >
+      <a href="#">
+        <img
+          src="./Logo.png"
+          class="md:w-[150px] w-[100px] h-[80px] object-cover md:h-[12 0px]"
+        />
+      </a>
+      <div class="flex items-center gap-5">
+        <div class="flex items-center cursor-pointer text-white">
+          <div class="flex items-center">
+            <p
+              class="w-[25px] rounded-full flex text-sm items-center justify-center h-[25px] bg-primary"
+            >
+              0
+            </p>
+            <svg
+              class="md:w-[50px] w-[30px] h-[50px] md:h-[80px]"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M6.616 21q-.691 0-1.153-.462T5 19.385V8.615q0-.69.463-1.152T6.616 7H8.5v-.5q0-1.458 1.021-2.479T12 3t2.479 1.021T15.5 6.5V7h1.885q.69 0 1.152.463T19 8.616v10.769q0 .69-.463 1.153T17.385 21zM9.5 7h5v-.5q0-1.056-.722-1.778T12 4t-1.778.722T9.5 6.5zm5.5 4q.214 0 .357-.143t.143-.357V8h-1v2.5q0 .214.143.357T15 11m-6 0q.214 0 .357-.143T9.5 10.5V8h-1v2.5q0 .214.143.357T9 11"
+              />
+            </svg>
+          </div>
+          <p>Your Cart</p>
+        </div>
+        <!-- <UserDropDown  /> -->
+        <div v-else class="md:flex hidden items-center gap-3">
+          <a
+            href="/login.html"
+            class="px-8 py-4 font-bold rounded-lg bg-primary text-white"
+          >
+            Login
+          </a>
+          <a
+            href="/register.html"
+            class="px-8 py-4 font-bold rounded-lg text-primary border-2 border-primary"
+          >
+            Register
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="xl:px-32 sm:px-5 px-2">
+      <div
+        class="bg-[#F7F8F9] py-24 my-10 rounded-xl flex flex-col items-center justify-center"
+      >
+        <h1 class="text-3xl font-bold">Shop</h1>
+        <p class="lg:w-[50%] w-[70%] text-center mt-2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna.
+        </p>
+      </div>
+      <div class="flex md:flex-row flex-col top-0 mb-[100px]">
+        <div class="lg:w-[25%] md:w-[35%] w-full md:sticky self-start top-16">
+          <div
+            class="flex items-center pl-2 rounded-full bg-white border-[1px] h-[50px]"
+          >
+            <svg
+              class="text-black/50"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
+              />
+            </svg>
+            <input
+              type="text"
+              class="w-full p-0 pl-2 border-none bg-transparent outline-none focus:ring-0"
+              placeholder="Search for products"
+            />
+          </div>
+          <div>
+            <p class="text mt-8 mb-3 font-bold">Product By Category</p>
+            <div>
+              <div
+                class="flex items-center cursor-pointer gap-2 py-3 px-2 border-t-[1px] border-t-black/10"
+              >
+                <p class="text-sm hover:text-primary transition-all">All</p>
+              </div>
+              <div
+                class="flex items-center border-b-[1px] border-b-black/10 cursor-pointer gap-2 py-3 px-2 border-t-[1px] border-t-black/10"
+              >
+                <p
+                  class="text-sm hover:text-primary transition-all text-primary font-medium"
+                >
+                  Beauty
+                </p>
+              </div>
+              <div
+                class="flex items-center border-b-[1px] border-b-black/10 cursor-pointer gap-2 py-3 px-2 border-t-[1px] border-t-black/10"
+              >
+                <p
+                  class="text-sm hover:text-primary transition-all font-medium"
+                >
+                  Clothes
+                </p>
+              </div>
+              <div
+                class="flex items-center border-b-[1px] border-b-black/10 cursor-pointer gap-2 py-3 px-2 border-t-[1px] border-t-black/10"
+              >
+                <p
+                  class="text-sm hover:text-primary transition-all font-medium"
+                >
+                  Electronic & IT
+                </p>
+              </div>
+              <div
+                class="flex items-center border-b-[1px] border-b-black/10 cursor-pointer gap-2 py-3 px-2 border-t-[1px] border-t-black/10"
+              >
+                <p
+                  class="text-sm hover:text-primary transition-all font-medium"
+                >
+                  Food
+                </p>
+              </div>
+              <div
+                class="flex items-center border-b-[1px] border-b-black/10 cursor-pointer gap-2 py-3 px-2 border-t-[1px] border-t-black/10"
+              >
+                <p
+                  class="text-sm hover:text-primary transition-all font-medium"
+                >
+                  Daily Life Good
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="lg:w-[75%] md:w-[65%] md:mt-0 mt-10 w-full mb-12 md:pl-[8%]"
+        >
+          <div
+            class="grid lg:grid-cols-4 md:grid-cols-2 mb-14 gap-x-5 gap-y-10"
+          >
+            <div class="cursor-pointer">
+              <a href="/productDetail.html">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+            <div class="cursor-pointer">
+              <a href="/productDetail.html">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+            <div class="cursor-pointer">
+              <a href="/productDetail.html">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+            <div class="cursor-pointer">
+              <a href="/productDetail.html">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+            <div class="cursor-pointer">
+              <a href="/productDetail.html">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+            <div class="cursor-pointer">
+              <a href="/productDetail.html">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+            <div class="cursor-pointer">
+              <a href="/productDetail.html">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+            <div class="cursor-pointer">
+              <a href="/productDetail.html">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+            <div class="cursor-pointer">
+              <a href="/productDetail.html">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+            <div class="cursor-pointer">
+              <a href="/productDetail.html">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+            <div class="cursor-pointer">
+              <a href="/productDetail.html">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+            <div class="cursor-pointer">
+              <a href="/productDetail.html">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+            <div class="cursor-pointer">
+              <a href="/productDetail.html">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+            <div class="cursor-pointer">
+              <a href="/productDetail.html">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+            <div class="cursor-pointer">
+              <a href="/productDetail">
+                <div
+                  class="w-full h-auto bg-[#F7F8F9] group rounded-xl overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                    src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                  />
+                </div>
+                <p class="mt-3 font-semibold">Product name</p>
+                <div class="flex gap-2 text-sm items-center font-semibold mt-1">
+                  <!-- <p class="text-primary">{{Math.floor(product?.price - ((product?.discount / 100) * product?.price))}} MMK</p> -->
+                  <p class="text-primary">1000 MMK</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- <div class="w-full h-[300px] flex items-center justify-center font-bold font-lg text-black/40">
+                    <p>No Products yet.</p>
+                </div> -->
+          <!-- <p ref="observer" v-if="products?.length > 0" class="opacity-0">
+            Load More
+          </p>
+          <div class="w-full flex justify-center">
+            <div
+              v-if="products?.length && isLoading"
+              class="w-8 h-8 animate-spin rounded-full border-[3px] border-primary border-t-transparent"
+            ></div>
+          </div>
+          <p
+            v-if="currentPage == lastPage && products?.length"
+            class="text-center"
+          >
+            No more products
+          </p> -->
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-secondary xl:px-32 sm:px-5 px-2 grid gap-y-10 xl:grid-cols-5 gap-4 md:grid-cols-3 py-20 text-white"
+    >
+      <div>
+        <h1 class="text-lg font-bold">Menu</h1>
+        <ul class="mt-6 gap-2 font-semibold flex flex-col">
+          <li>
+            <a href="/home.html">Home</a>
+          </li>
+          <li>
+            <a href="/home.html">Beauty</a>
+          </li>
+          <li>
+            <a href="/home.html">Clothes</a>
+          </li>
+          <li>
+            <a href="/home.html">Food</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-2">
+        <h1 class="text-lg font-bold">Popular Products</h1>
+        <div class="mt-6 grid md:grid-cols-2 gap-4">
+          <a href="/productDetail.html">
+            <div class="flex gap-4 items-center">
+              <div
+                class="w-[80px] h-[80px] shrink-0 rounded-md overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                />
+              </div>
+              <div>
+                <h1 class="font-bold">Product Name</h1>
+                <p class="text-sm text-primary font-semibold">200000 MMK</p>
+              </div>
+            </div>
+          </a>
+          <a href="/productDetail.html">
+            <div class="flex gap-4 items-center">
+              <div
+                class="w-[80px] h-[80px] shrink-0 rounded-md overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                />
+              </div>
+              <div>
+                <h1 class="font-bold">Product Name</h1>
+                <p class="text-sm text-primary font-semibold">200000 MMK</p>
+              </div>
+            </div>
+          </a>
+          <a href="/productDetail.html">
+            <div class="flex gap-4 items-center">
+              <div
+                class="w-[80px] h-[80px] shrink-0 rounded-md overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                />
+              </div>
+              <div>
+                <h1 class="font-bold">Product Name</h1>
+                <p class="text-sm text-primary font-semibold">200000 MMK</p>
+              </div>
+            </div>
+          </a>
+          <a href="/productDetail.html">
+            <div class="flex gap-4 items-center">
+              <div
+                class="w-[80px] h-[80px] shrink-0 rounded-md overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                />
+              </div>
+              <div>
+                <h1 class="font-bold">Product Name</h1>
+                <p class="text-sm text-primary font-semibold">200000 MMK</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="xl:col-span-2 md:col-span-3">
+        <div class="bg-[#383E52] flex flex-col items-center p-10 rounded-xl">
+          <h1 class="text-lg font-extrabold mb-2">
+            Get 10% OFF of your first purchase
+          </h1>
+          <div
+            class="xl:w-full md:w-[50%] w-full h-[55px] bg-white rounded-full"
+          >
+            <input
+              class="w-full h-full text-black text-sm pl-6 bg-transparent border-none outline-none focus:ring-0"
+              placeholder="Enter your email address"
+            />
+          </div>
+          <!-- <ValidationError :message="errors.email" /> -->
+          <button
+            class="xl:w-full md:w-[50%] w-full h-full bg-primary rounded-full py-4 font-bold mt-3"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Cart modal -->
+    <!-- <div
+      class="fixed top-0 flex items-center justify-center left-0 w-full h-full inset-0 overflow-hidden px-4 py-6 sm:px-0 z-50"
+    >
+      <div class="fixed inset-0 transform transition-all">
+        <div class="absolute inset-0 bg-gray-500 opacity-50" />
+      </div>
+      <div
+        class="bg-white rounded-lg sm:max-w-2xl overflow-hidden shadow-xl h-full transform transition-all sm:w-full sm:mx-auto"
+      >
+        <div
+          class="bg-white overflow-hidden relative h-full rounded-xl pb-[220px]"
+        >
+          <div
+            class="flex items-center justify-between border-b-[1px] border-b-black/10 px-7 py-6"
+          >
+            <p class="text-lg font-bold">Your Cart</p>
+            <svg
+              class="text-black cursor-pointer"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="m12 13.4l-2.917 2.925q-.277.275-.704.275t-.704-.275q-.275-.275-.275-.7t.275-.7L10.6 12L7.675 9.108Q7.4 8.831 7.4 8.404t.275-.704q.275-.275.7-.275t.7.275L12 10.625L14.892 7.7q.277-.275.704-.275t.704.275q.3.3.3.713t-.3.687L13.375 12l2.925 2.917q.275.277.275.704t-.275.704q-.3.3-.712.3t-.688-.3z"
+              />
+            </svg>
+          </div>
+          <div class="overflow-y-auto h-full">
+            <div class="pt-8 px-7 h-full flex flex-col gap-10">
+              <div class="flex items-start justify-between">
+                <div
+                  class="md:basis-[80%] basis-[60%] flex md:flex-row flex-col gap-3 md:items-center"
+                >
+                  <div
+                    class="md:basis-[30%] w-[50%] border-[1px] border-black/30 rounded-xl overflow-hidden"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                    />
+                  </div>
+                  <div class="md:basis-[70%] flex flex-col">
+                    <p class="text-lg font-semibold">Product Name</p>
+                    <p class="text-black/60">100000 MMK</p>
+                    <div
+                      class="text-red-500 flex items-center mt-3 border-b-[1px] border-red-500 gap-2 w-max"
+                    >
+                      <p
+                        class="text-lg cursor-pointer font-medium leading-[1] text-red-500"
+                      >
+                        Remove
+                      </p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M5 21V6H4V4h5V3h6v1h5v2h-1v15zm2-2h10V6H7zm2-2h2V8H9zm4 0h2V8h-2zM7 6v13z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="shrink-0 md:basis-[20%] basis-[30%]">
+                  <input
+                    type="number"
+                    value="1"
+                    class="w-full border-[1px] rounded-full py-3 px-5"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="px-8 absolute bottom-0 border-t-[1px] border-t-black/10 bg-white left-0 w-full z-10 py-5"
+            >
+              <div class="flex text-lg items-center justify-between">
+                <p class="text-black/60">Subtotal :</p>
+                <p class="font-bold">100000 MMK</p>
+              </div>
+              <a
+                href="/checkout.html"
+                class="w-full h-full text-white inline-block text-center bg-primary rounded-full py-4 font-bold mt-3"
+              >
+                Continue to Checkout
+              </a>
+            </div>
+          </div>
+          if cart has not item
+          <div class="flex flex-col w-full h-[85%] items-center justify-center">
+            <p class="text-lg font-bold text-black/50">No items found.</p>
+            <a
+              href="/home.html"
+              class="text-white bg-primary rounded-full py-4 px-7 font-bold mt-3"
+            >
+              Start Shopping </a
+            >`
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </body>
+</html>

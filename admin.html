@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0285FF",
+              secondary: "#20283F",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="flex h-screen overflow-hidden font-roboto">
+      <aside
+        ref="target"
+        class="absolute left-0 top-0 z-[9999] flex h-screen w-[270px] flex-col overflow-y-hidden text-white bg-secondary duration-300 ease-linear lg:static transition-all lg:translate-x-0"
+      >
+        <div class="flex items-center justify-between gap-2 py-5.5 lg:py-6.5">
+          <a href="/home.html" class="block w-full">
+            <div
+              class="py-[1rem] border-b border-b-gray-300 px-6 w-full flex items-center space-x-3"
+            >
+              <img src="/Logo.png" alt="logo" class="w-[80px]" />
+              <h3 class="font-bold text-md text-center">P & P Market</h3>
+            </div>
+          </a>
+        </div>
+        <!-- Sidebar Header -->
+
+        <div
+          class="flex flex-col overflow-y-auto scroll duration-300 ease-linear"
+        >
+          <div class="py-4 px-3">
+            <div class="my-3.5 mx-4">
+              <h1 class="font-bold text-xs uppercase text-gray-200">
+                Dashboard Administration
+              </h1>
+            </div>
+            <nav class="">
+              <div class="flex flex-col h-auto overflow-y-auto scroll pb-12">
+                <div>
+                  <div
+                    class="w-full rounded-[4px] transition-all duration-150 mb-3 hover:bg-primary"
+                  >
+                    <a
+                      href="#"
+                      class="relative flex items-center gap-2.5 rounded-sm py-3 px-4 font-semibold text-sm duration-300 ease-in-out"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"
+                        />
+                      </svg>
+
+                      Product
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- logout -->
+            </nav>
+          </div>
+        </div>
+        <div
+          class="w-full px-3 font-roboto transition-all duration-150 absolute left-0 bottom-2 bg-secondary"
+        >
+          <a
+            class="font-bold text-md rounded-[4px] flex h-[48px] items-center cursor-pointer mb-1 pl-3 bg-[#BE1700]"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              class="mr-1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.75 3.66757H4.58331V16.5009C4.58331 16.9871 4.77647 17.4535 5.12028 17.7973C5.4641 18.1411 5.93042 18.3342 6.41665 18.3342H13.75M14.6666 13.7509L17.4166 11.0009M17.4166 11.0009L14.6666 8.25091M17.4166 11.0009H8.24998"
+                stroke="#FDFDFD"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Logout
+          </a>
+        </div>
+      </aside>
+      <div
+        class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden"
+      >
+        <main>
+          <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10 bg-gray-50">
+            <div
+              class="relative border border-gray-300 bg-white rounded-md shadow-sm shadow-gray-200 px-5 py-3"
+            >
+              <div class="flex justify-end mb-3">
+                <a
+                  class="text-sm px-4 flex items-center gap-3 shadow-md py-3 text-white bg-primary hover:bg-blue-900 font-semibold rounded-md transition-all active:animate-press"
+                  href="/productCreate.html"
+                >
+                  Create
+                </a>
+              </div>
+              <div
+                class="relative flex flex-col min-w-0 break-words w-full mb-6 rounded-md overflow-hidden border"
+              >
+                <div class="overflow-x-auto w-full">
+                  <table class="w-full text-sm text-left">
+                    <thead class="text-white bg-primary">
+                      <tr>
+                        <th scope="col" class="px-6 py-3 min-w-[100px]">
+                          <span class="capitalize p-1.5"> ID </span>
+                        </th>
+
+                        <th scope="col" class="px-6 py-3 min-w-[100px]">
+                          <span class="capitalize p-1.5"> Preview </span>
+                        </th>
+                        <th scope="col" class="px-6 py-3 min-w-[100px]">
+                          <span class="capitalize p-1.5"> Category </span>
+                        </th>
+                        <th scope="col" class="px-6 py-3 min-w-[100px]">
+                          <span class="capitalize p-1.5"> Name </span>
+                        </th>
+
+                        <th scope="col" class="px-6 py-3 min-w-[100px]">
+                          <span class="capitalize p-1.5"> Price </span>
+                        </th>
+
+                        <th scope="col" class="px-6 py-3 min-w-[100px]">
+                          <span class="capitalize p-1.5"> Priority </span>
+                        </th>
+                        <th scope="col" class="px-6 py-3 min-w-[100px]">
+                          <span class="capitalize p-1.5"> Description </span>
+                        </th>
+                        <th scope="col" class="px-6 py-3 min-w-[100px]">
+                          <span class="capitalize p-1.5"> Actions </span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="border-b">
+                        <td class="px-6 py-4">
+                          <span class="text-darkGray p-1.5 font-semibold block">
+                            1
+                          </span>
+                        </td>
+                        <td class="px-6 py-4">
+                          <span class="text-darkGray p-1.5 font-semibold block">
+                            <img
+                              src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                              alt="Product Image"
+                              class="w-16 h-16 object-cover"
+                            />
+                          </span>
+                        </td>
+                        <td class="px-6 py-4 min-w-[150px]">
+                          <span class="text-darkGray p-1.5 font-semibold block">
+                            Category
+                          </span>
+                        </td>
+                        <td class="px-6 py-4 min-w-[150px]">
+                          <span class="text-darkGray p-1.5 font-semibold block">
+                            Product Name
+                          </span>
+                        </td>
+                        <td class="px-6 py-4 min-w-[150px]">
+                          <span class="text-darkGray p-1.5 font-semibold block">
+                            10000 MMK
+                          </span>
+                        </td>
+                        <td class="px-6 py-4 min-w-[150px]">
+                          <span class="text-darkGray p-1.5 font-semibold block">
+                            1
+                          </span>
+                        </td>
+                        <td class="px-6 py-4">
+                          <span
+                            class="text-darkGray min-w-[400px] p-1.5 font-semibold w-full line-clamp-2 block"
+                          >
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolores, et accusamus ad corporis quaerat
+                            explicabo error, adipisci recusandae ullam nesciunt
+                            nobis aut, facere maiores corrupti! Itaque, fugiat.
+                            Totam fuga beatae, nihil blanditiis modi unde
+                            numquam quia nostrum repudiandae eius animi dolores
+                            laboriosam corrupti nobis fugit vel, quos voluptatem
+                            odit autem.
+                          </span>
+                        </td>
+                        <td class="px-6 py-4">
+                          <div
+                            class="space-x-3 flex items-center min-w-[200px] w-auto max-w-[500px]"
+                          >
+                            <a
+                              href=""
+                              class="text-sm px-4 flex items-center gap-3 shadow-md py-3 text-white bg-primary hover:bg-blue-900 font-semibold rounded-md transition-all active:animate-press"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  fill="currentColor"
+                                  d="M5 19h1.425L16.2 9.225L14.775 7.8L5 17.575zm-2 2v-4.25L16.2 3.575q.3-.275.663-.425t.762-.15t.775.15t.65.45L20.425 5q.3.275.438.65T21 6.4q0 .4-.137.763t-.438.662L7.25 21zM19 6.4L17.6 5zm-3.525 2.125l-.7-.725L16.2 9.225z"
+                                />
+                              </svg>
+                              Edit
+                            </a>
+                            <a
+                              href=""
+                              class="text-sm px-4 flex items-center gap-3 shadow-md py-3 text-white bg-red-500 hover:bg-blue-900 font-semibold rounded-md transition-all active:animate-press"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  fill="currentColor"
+                                  d="M5 21V6H4V4h5V3h6v1h5v2h-1v15zm2-2h10V6H7zm2-2h2V8H9zm4 0h2V8h-2zM7 6v13z"
+                                />
+                              </svg>
+                              Delete
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

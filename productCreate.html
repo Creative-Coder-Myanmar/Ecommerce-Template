@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0285FF",
+              secondary: "#20283F",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="flex h-screen overflow-hidden font-roboto">
+      <aside
+        ref="target"
+        class="absolute left-0 top-0 z-[9999] flex h-screen w-[270px] flex-col overflow-y-hidden text-white bg-secondary duration-300 ease-linear lg:static transition-all lg:translate-x-0"
+      >
+        <div class="flex items-center justify-between gap-2 py-5.5 lg:py-6.5">
+          <a href="/home.html" class="block w-full">
+            <div
+              class="py-[1rem] border-b border-b-gray-300 px-6 w-full flex items-center space-x-3"
+            >
+              <img src="/Logo.png" alt="logo" class="w-[80px]" />
+              <h3 class="font-bold text-md text-center">P & P Market</h3>
+            </div>
+          </a>
+        </div>
+        <!-- Sidebar Header -->
+
+        <div
+          class="flex flex-col overflow-y-auto scroll duration-300 ease-linear"
+        >
+          <div class="py-4 px-3">
+            <div class="my-3.5 mx-4">
+              <h1 class="font-bold text-xs uppercase text-gray-200">
+                Dashboard Administration
+              </h1>
+            </div>
+            <nav class="">
+              <div class="flex flex-col h-auto overflow-y-auto scroll pb-12">
+                <div>
+                  <div
+                    class="w-full rounded-[4px] transition-all duration-150 mb-3 hover:bg-primary"
+                  >
+                    <a
+                      href="#"
+                      class="relative flex items-center gap-2.5 rounded-sm py-3 px-4 font-semibold text-sm duration-300 ease-in-out"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"
+                        />
+                      </svg>
+
+                      Product
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- logout -->
+            </nav>
+          </div>
+        </div>
+        <div
+          class="w-full px-3 font-roboto transition-all duration-150 absolute left-0 bottom-2 bg-secondary"
+        >
+          <a
+            class="font-bold text-md rounded-[4px] flex h-[48px] items-center cursor-pointer mb-1 pl-3 bg-[#BE1700]"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              class="mr-1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.75 3.66757H4.58331V16.5009C4.58331 16.9871 4.77647 17.4535 5.12028 17.7973C5.4641 18.1411 5.93042 18.3342 6.41665 18.3342H13.75M14.6666 13.7509L17.4166 11.0009M17.4166 11.0009L14.6666 8.25091M17.4166 11.0009H8.24998"
+                stroke="#FDFDFD"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Logout
+          </a>
+        </div>
+      </aside>
+      <div
+        class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden"
+      >
+        <main>
+          <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10 bg-gray-50">
+            <div class="border p-10 bg-white rounded-md">
+              <form class="space-y-4 md:space-y-6">
+                <div class="">
+                  <div class="image-wrapper">
+                    <input type="file" />
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <div class="flex flex-col">
+                    <label class="font-semibold text-sm">Product Name</label>
+                    <input
+                      class="outline-none px-4 focus:ring-0 border-[1px] border-black/10 py-4 rounded-lg focus:border-primary transition-all mt-2"
+                      type="text"
+                      placeholder="Enter your product Name"
+                    />
+                  </div>
+                  <div class="flex flex-col">
+                    <label class="font-semibold text-sm">Category</label>
+                    <select
+                      class="w-full border-[1px] mt-2 px-3 border-black/20 focus:border-primary transition-all py-3 rounded-lg"
+                    >
+                      <option>Beauty</option>
+                      <option>Clothes</option>
+                      <option>Food</option>
+                    </select>
+                  </div>
+                  <div class="flex flex-col">
+                    <label class="font-semibold text-sm">Price</label>
+                    <input
+                      class="outline-none px-4 focus:ring-0 border-[1px] border-black/10 py-4 rounded-lg focus:border-primary transition-all mt-2"
+                      type="text"
+                      placeholder="Enter price"
+                    />
+                  </div>
+                  <div class="flex flex-col">
+                    <label class="font-semibold text-sm">Discount</label>
+                    <input
+                      class="outline-none px-4 focus:ring-0 border-[1px] border-black/10 py-4 rounded-lg focus:border-primary transition-all mt-2"
+                      type="text"
+                      placeholder="Enter Discount"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <label label="Description" />
+                    <textarea
+                      class="w-full border-[1px] border-black/10 py-3 px-3 rounded-[5px]"
+                      placeholder="Enter Description"
+                      rows="5"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="flex items-center justify-end space-x-5">
+                  <a
+                    href="/admin.html"
+                    class="text-sm px-4 bg-gray-600 hover:bg-gray-700 text-white flex items-center gap-3 shadow-md py-3 font-semibold rounded-md transition-all active:animate-press"
+                  >
+                    Cancel
+                  </a>
+                  <a
+                    href="/admin.html"
+                    class="text-sm px-4 flex items-center gap-3 shadow-md py-3 text-white bg-primary hover:bg-blue-900 font-semibold rounded-md transition-all active:animate-press"
+                  >
+                    Create
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

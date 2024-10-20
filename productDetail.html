@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0285FF",
+              secondary: "#20283F",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div
+      class="flex items-center justify-between xl:px-32 sm:px-5 px-2 bg-secondary"
+    >
+      <a href="#">
+        <img
+          src="./Logo.png"
+          class="md:w-[150px] w-[100px] h-[80px] object-cover md:h-[12 0px]"
+        />
+      </a>
+      <div class="flex items-center gap-5">
+        <div class="flex items-center cursor-pointer text-white">
+          <div class="flex items-center">
+            <p
+              class="w-[25px] rounded-full flex text-sm items-center justify-center h-[25px] bg-primary"
+            >
+              0
+            </p>
+            <svg
+              class="md:w-[50px] w-[30px] h-[50px] md:h-[80px]"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M6.616 21q-.691 0-1.153-.462T5 19.385V8.615q0-.69.463-1.152T6.616 7H8.5v-.5q0-1.458 1.021-2.479T12 3t2.479 1.021T15.5 6.5V7h1.885q.69 0 1.152.463T19 8.616v10.769q0 .69-.463 1.153T17.385 21zM9.5 7h5v-.5q0-1.056-.722-1.778T12 4t-1.778.722T9.5 6.5zm5.5 4q.214 0 .357-.143t.143-.357V8h-1v2.5q0 .214.143.357T15 11m-6 0q.214 0 .357-.143T9.5 10.5V8h-1v2.5q0 .214.143.357T9 11"
+              />
+            </svg>
+          </div>
+          <p>Your Cart</p>
+        </div>
+        <!-- <UserDropDown  /> -->
+        <div v-else class="md:flex hidden items-center gap-3">
+          <a
+            href="/login.html"
+            class="px-8 py-4 font-bold rounded-lg bg-primary text-white"
+          >
+            Login
+          </a>
+          <a
+            href="/register.html"
+            class="px-8 py-4 font-bold rounded-lg text-primary border-2 border-primary"
+          >
+            Register
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="xl:px-32 sm:px-5 px-2">
+      <div class="mt-10 flex md:flex-row flex-col xl:gap-10 gap-5">
+        <div class="lg:basis-[65%] md:basis-[60%] overflow-hidden">
+          <div class="flex lg:flex-row flex-col-reverse gap-5">
+            <div class="basis-[10%] flex lg:flex-col flex-row gap-4">
+              <div
+                class="w-full h-auto rounded-lg overflow-hidden group cursor-pointer"
+              >
+                <img
+                  class="w-full h-full group-hover:scale-[1.1] transition-all"
+                  src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                />
+              </div>
+              <div
+                class="w-full h-auto rounded-lg overflow-hidden group cursor-pointer"
+              >
+                <img
+                  class="w-full h-full group-hover:scale-[1.1] transition-all"
+                  src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a777d6557d526b9dba47_image-12-shop-product-shopwave-template.png"
+                />
+              </div>
+              <div
+                class="w-full h-auto rounded-lg overflow-hidden group cursor-pointer"
+              >
+                <img
+                  class="w-full h-full group-hover:scale-[1.1] transition-all"
+                  src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f697b6ea32fefb0084af2c_more-image-3-shop-product-shopwave-template.png"
+                />
+              </div>
+            </div>
+            <div class="basis-[90%]">
+              <div
+                class="w-full h-auto cursor-pointer group rounded-xl overflow-hidden"
+              >
+                <img
+                  class="w-full h-full group-hover:scale-[1.1] transition-all duration-200"
+                  src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f697b6ea32fefb0084af2c_more-image-3-shop-product-shopwave-template.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="w-full h-[1px] bg-black/10 my-16"></div>
+          <div
+            class="border-[1px] md:hidden block border-black/10 rounded-xl py-6 px-6"
+          >
+            <div
+              class="inline-block px-3 py-1 bg-primary rounded-full text-white font-semibold text-sm"
+            >
+              Hot
+            </div>
+            <h1 class="text-2xl mt-3 font-medium">Product name</h1>
+            <a
+              href="#description"
+              class="mt-2 text-[16px] mb-5 line-clamp-3 text-black/70 font-medium"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error
+              debitis aliquid non cum. Voluptas aut dolores eaque optio
+              excepturi expedita hic fugiat nemo porro voluptatibus nisi
+              molestiae aspernatur facilis repudiandae exercitationem dolorum
+              vel repellat, maiores totam, numquam amet dolorem assumenda
+              libero? Officiis, soluta sint facilis eum vitae veniam hic
+              unde.</a
+            >
+            <div class="flex items-end mt-1 gap-2">
+              <p class="font-bold text-2xl">100000 MMK</p>
+              <!-- <p v-else class="font-bold text-2xl">No product Yet</p> -->
+            </div>
+            <div class="my-8 h-[1px] w-full bg-black/20"></div>
+            <p class="font-semibold text-lg">Product information</p>
+            <div class="flex flex-col gap-2 mt-3">
+              <div class="flex items-center">
+                <p class="basis-[35%] font-semibold">Category:</p>
+                <p class="basis-[65%] text-black/70">Clothes</p>
+              </div>
+              <div class="flex items-center">
+                <p class="basis-[35%] font-semibold">Stock:</p>
+                <!-- <p  class="basis-[65%] text-black/70 text-red-500">Out Of Stock</p> -->
+                <p class="basis-[65%] text-black/70">1000</p>
+              </div>
+              <div class="flex items-end cursor-pointer">
+                <p class="basis-[35%] shrink-0 capitalize font-semibold">
+                  Colors:
+                </p>
+                <div class="flex items-center flex-wrap gap-2 w-full">
+                  <p
+                    class="shrink-0 border-[1px] bg-primary text-white border-transparent border-black/30 rounded-full px-4 py-1 text-black/70"
+                  >
+                    Red
+                  </p>
+                  <p
+                    class="shrink-0 border-[1px] bg-primary text-white border-transparent border-black/30 rounded-full px-4 py-1 text-black/70"
+                  >
+                    Green
+                  </p>
+                  <p
+                    class="shrink-0 border-[1px] bg-primary text-white border-transparent border-black/30 rounded-full px-4 py-1 text-black/70"
+                  >
+                    Blue
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-end cursor-pointer">
+                <p class="basis-[35%] shrink-0 capitalize font-semibold">
+                  Sizes:
+                </p>
+                <div class="flex items-center flex-wrap gap-2 w-full">
+                  <p
+                    class="shrink-0 border-[1px] bg-primary text-white border-transparent border-black/30 rounded-full px-4 py-1 text-black/70"
+                  >
+                    Sm
+                  </p>
+                  <p
+                    class="shrink-0 border-[1px] bg-primary text-white border-transparent border-black/30 rounded-full px-4 py-1 text-black/70"
+                  >
+                    Md
+                  </p>
+                  <p
+                    class="shrink-0 border-[1px] bg-primary text-white border-transparent border-black/30 rounded-full px-4 py-1 text-black/70"
+                  >
+                    Lg
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="my-8 h-[1px] w-full bg-black/20"></div>
+            <div
+              class="flex lg:items-center lg:flex-row flex-col gap-3 mt-4 mb-2"
+            >
+              <div class="lg:basis-[40%]">
+                <p class="font-bold mb-2">Quantity</p>
+                <input
+                  class="w-full border-black/10 rounded-full py-3 pl-5"
+                  type="number"
+                />
+              </div>
+            </div>
+            <button
+              class="w-full h-full disabled:opacity-45 disabled:cursor-not-allowed text-white bg-primary rounded-full py-4 font-bold mt-3"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="md:mt-0 mt-10">
+            <div class="flex items-center justify-between">
+              <h1 class="text-2xl font-semibold">Latest Products</h1>
+              <a href="/home.html" class="text-sm text-primary underline"
+                >View all</a
+              >
+            </div>
+            <div class="grid lg:grid-cols-3 mb-10 mt-7 gap-3">
+              <a class="h-min block" href="/productDetail.html">
+                <div
+                  class="rounded-lg h-full flex lg:flex-col flex-row cursor-pointer hover:translate-y-[-10px] transition-all duration-200 group shadow-md hover:shadow-lg overflow-hidden"
+                >
+                  <div class="w-full lg:w-full basis-[40%] overflow-hidden">
+                    <img
+                      src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                      class="w-full h-full object-cover group-hover:scale-[1.1] transition-all duration-200"
+                    />
+                  </div>
+                  <div class="py-4 lg:-w-full basis-[60%] px-6">
+                    <p class="text-sm text-primary">Clothes</p>
+                    <h1
+                      class="mt-2 md:text-lg text-base line-clamp-1 font-bold group-hover:text-primary transition-all duration-200"
+                    >
+                      Product Name
+                    </h1>
+                    <div
+                      class="flex xl:flex-row flex-col xl:items-center font-semibold mt-2 xl:gap-2"
+                    >
+                      <p class="text-primary">100000 MMK</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="h-min block" href="/productDetail.html">
+                <div
+                  class="rounded-lg h-full flex lg:flex-col flex-row cursor-pointer hover:translate-y-[-10px] transition-all duration-200 group shadow-md hover:shadow-lg overflow-hidden"
+                >
+                  <div class="w-full lg:w-full basis-[40%] overflow-hidden">
+                    <img
+                      src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                      class="w-full h-full object-cover group-hover:scale-[1.1] transition-all duration-200"
+                    />
+                  </div>
+                  <div class="py-4 lg:-w-full basis-[60%] px-6">
+                    <p class="text-sm text-primary">Clothes</p>
+                    <h1
+                      class="mt-2 md:text-lg text-base line-clamp-1 font-bold group-hover:text-primary transition-all duration-200"
+                    >
+                      Product Name
+                    </h1>
+                    <div
+                      class="flex xl:flex-row flex-col xl:items-center font-semibold mt-2 xl:gap-2"
+                    >
+                      <p class="text-primary">100000 MMK</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="h-min block" href="/productDetail.html">
+                <div
+                  class="rounded-lg h-full flex lg:flex-col flex-row cursor-pointer hover:translate-y-[-10px] transition-all duration-200 group shadow-md hover:shadow-lg overflow-hidden"
+                >
+                  <div class="w-full lg:w-full basis-[40%] overflow-hidden">
+                    <img
+                      src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                      class="w-full h-full object-cover group-hover:scale-[1.1] transition-all duration-200"
+                    />
+                  </div>
+                  <div class="py-4 lg:-w-full basis-[60%] px-6">
+                    <p class="text-sm text-primary">Clothes</p>
+                    <h1
+                      class="mt-2 md:text-lg text-base line-clamp-1 font-bold group-hover:text-primary transition-all duration-200"
+                    >
+                      Product Name
+                    </h1>
+                    <div
+                      class="flex xl:flex-row flex-col xl:items-center font-semibold mt-2 xl:gap-2"
+                    >
+                      <p class="text-primary">100000 MMK</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="w-full h-[1px] bg-black/10 my-16"></div>
+          <div>
+            <h1 class="text-2xl font-semibold">Product information</h1>
+            <div class="mt-4" id="description">
+              <p class="text-lg text-black/50">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+                dolorem facere veniam, esse iusto itaque architecto, a quis
+                cupiditate beatae quam aspernatur, dolores sint corrupti
+                similique ullam autem eveniet ea tenetur ut? Itaque molestias
+                quod similique laborum aliquid. Atque similique expedita tempora
+                est commodi distinctio sequi ipsum ducimus doloremque beatae!
+              </p>
+            </div>
+          </div>
+          <div class="w-full h-[1px] bg-black/10 my-16"></div>
+          <!-- <div>
+                    <h1 class="text-2xl font-semibold">Product Details</h1>
+                    <div class="bg-[#F7F8F9] mt-8 rounded-xl p-10">
+                        <div class="flex items-center py-5  border-b-[1px] border-b-black/10">
+                            <p class="basis-[35%] text-xl font-bold">Brand:</p>
+                            <p class="basis-[65%] text-xl font-medium text-black/60">Fashion Co.</p>
+                        </div>
+                        <div class="flex items-center py-5  border-b-[1px] border-b-black/10">
+                            <p class="basis-[35%] text-xl font-bold">Model Name:</p>
+                            <p class="basis-[65%] text-xl font-medium text-black/60">Fashion Co.</p>
+                        </div>
+                        <div class="flex items-center py-5  border-b-[1px] border-b-black/10">
+                            <p class="basis-[35%] text-xl font-bold">Color:</p>
+                            <p class="basis-[65%] text-xl font-medium text-black/60">Fashion Co.</p>
+                        </div>
+                        <div class="flex items-center py-5  border-b-[1px] border-b-black/10">
+                            <p class="basis-[35%] text-xl font-bold">Size:</p>
+                            <p class="basis-[65%] text-xl font-medium text-black/60">Fashion Co.</p>
+                        </div>
+                        <div class="flex items-center py-5  border-b-[1px] border-b-black/10">
+                            <p class="basis-[35%] text-xl font-bold">Package dimensions
+                                :</p>
+                            <p class="basis-[65%] text-xl font-medium text-black/60">Fashion Co.</p>
+                        </div>
+                        <div class="flex items-center py-5  border-b-[1px] border-b-black/10">
+                            <p class="basis-[35%] text-xl font-bold">Item weight
+                                :</p>
+                            <p class="basis-[65%] text-xl font-medium text-black/60">Fashion Co.</p>
+                        </div>
+                    </div>
+                </div> -->
+          <div class="my-16">
+            <h1 class="text-2xl font-semibold">Shipping Information Updated</h1>
+            <p class="text-lg text-black/50">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis
+              arcu enim urna adipiscing praesent velit viverra sit semper lorem
+              eu cursus vel hendrerit elementum morbi curabitur etiam nibh
+              justo, lorem aliquet donec sed sit mi dignissim at ante massa
+              mattis. Viverra aliquet eget sit amet tellus cras. Cursus sit amet
+              dictum sit amet. Diam donec adipiscing tristique risus nec. Diam
+              donec adipiscing tristique risus nec feugiat in. Quisque egestas
+              diam in arcu cursus euismod quis viverra nibh. Quis imperdiet
+              massa tincidunt nunc.
+            </p>
+          </div>
+        </div>
+        <div class="lg:basis-[35%] md:basis-[40%]">
+          <div
+            class="border-[1px] md:block hidden border-black/10 rounded-xl py-6 px-6"
+          >
+            <div
+              class="inline-block px-3 py-1 bg-primary rounded-full text-white font-semibold text-sm"
+            >
+              Hot
+            </div>
+            <h1 class="text-2xl mt-3 font-medium">Product Name</h1>
+            <a
+              href="#description"
+              class="mt-2 text-[16px] mb-5 text-black/70 line-clamp-3 font-medium"
+              >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Accusamus aspernatur dolores voluptatibus eligendi ab nemo a rerum
+              ea totam dolore, laudantium nesciunt adipisci quas iste
+              praesentium. Nesciunt quod autem excepturi!</a
+            >
+            <div class="flex items-end mt-1 gap-2">
+              <p class="font-bold text-2xl">10000 MMK</p>
+              <!-- <p v-else class="font-bold text-2xl">No product Yet</p> -->
+            </div>
+            <div class="my-8 h-[1px] w-full bg-black/20"></div>
+            <p class="font-semibold text-lg">Product information</p>
+            <div class="flex flex-col gap-2 mt-3">
+              <div class="flex items-center">
+                <p class="basis-[35%] font-semibold">Category:</p>
+                <p class="basis-[65%] text-black/70">Clothes</p>
+              </div>
+              <div class="flex items-center">
+                <p class="basis-[35%] font-semibold">Stock:</p>
+                <p class="basis-[65%] text-red-500 text-black/70">
+                  Out of stock
+                </p>
+                <p class="basis-[65%] text-black/70">10</p>
+              </div>
+              <div class="flex items-end cursor-pointer">
+                <p class="basis-[35%] shrink-0 capitalize font-semibold">
+                  Colors:
+                </p>
+                <div class="flex items-center flex-wrap gap-2 w-full">
+                  <p
+                    class="shrink-0 border-[1px] bg-primary text-white border-transparent border-black/30 rounded-full px-4 py-1 text-black/70"
+                  >
+                    Red
+                  </p>
+                  <p
+                    class="shrink-0 border-[1px] bg-primary text-white border-transparent border-black/30 rounded-full px-4 py-1 text-black/70"
+                  >
+                    Green
+                  </p>
+                  <p
+                    class="shrink-0 border-[1px] bg-primary text-white border-transparent border-black/30 rounded-full px-4 py-1 text-black/70"
+                  >
+                    Blue
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-end cursor-pointer">
+                <p class="basis-[35%] shrink-0 capitalize font-semibold">
+                  Sizes:
+                </p>
+                <div class="flex items-center flex-wrap gap-2 w-full">
+                  <p
+                    class="shrink-0 border-[1px] bg-primary text-white border-transparent border-black/30 rounded-full px-4 py-1 text-black/70"
+                  >
+                    Sm
+                  </p>
+                  <p
+                    class="shrink-0 border-[1px] bg-primary text-white border-transparent border-black/30 rounded-full px-4 py-1 text-black/70"
+                  >
+                    Md
+                  </p>
+                  <p
+                    class="shrink-0 border-[1px] bg-primary text-white border-transparent border-black/30 rounded-full px-4 py-1 text-black/70"
+                  >
+                    Lg
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="my-8 h-[1px] w-full bg-black/20"></div>
+            <div
+              class="flex lg:items-center lg:flex-row flex-col gap-3 mt-4 mb-2"
+            >
+              <div class="lg:basis-[40%]">
+                <p class="font-bold mb-2">Quantity</p>
+                <input
+                  class="w-full border-black/10 rounded-full py-3 pl-5"
+                  type="number"
+                />
+              </div>
+            </div>
+            <button
+              class="w-full h-full disabled:opacity-45 disabled:cursor-not-allowed text-white bg-primary rounded-full py-4 font-bold mt-3"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="mt-12">
+            <div class="flex items-center justify-between mb-7">
+              <h1 class="text-2xl font-medium">Related Product</h1>
+              <a href="/home.html" class="text-sm text-primary underline"
+                >View all</a
+              >
+            </div>
+            <div class="flex flex-col gap-7">
+              <a href="/productDetail.html">
+                <div class="flex items-center gap-5 group cursor-pointer">
+                  <div class="basis-[30%] h-auto rounded-xl overflow-hidden">
+                    <img
+                      class="w-full h-full group-hover:scale-[1.1] transition-all duration-200 object-cover"
+                      src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                    />
+                  </div>
+                  <div class="basis-[70%]">
+                    <p
+                      class="text-lg group-hover:text-primary transition-all duration-200 font-semibold"
+                    >
+                      Product Name
+                    </p>
+                    <div class="flex items-center gap-2">
+                      <p class="font-bold">100000 MMK</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/productDetail.html">
+                <div class="flex items-center gap-5 group cursor-pointer">
+                  <div class="basis-[30%] h-auto rounded-xl overflow-hidden">
+                    <img
+                      class="w-full h-full group-hover:scale-[1.1] transition-all duration-200 object-cover"
+                      src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                    />
+                  </div>
+                  <div class="basis-[70%]">
+                    <p
+                      class="text-lg group-hover:text-primary transition-all duration-200 font-semibold"
+                    >
+                      Product Name
+                    </p>
+                    <div class="flex items-center gap-2">
+                      <p class="font-bold">100000 MMK</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/productDetail.html">
+                <div class="flex items-center gap-5 group cursor-pointer">
+                  <div class="basis-[30%] h-auto rounded-xl overflow-hidden">
+                    <img
+                      class="w-full h-full group-hover:scale-[1.1] transition-all duration-200 object-cover"
+                      src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                    />
+                  </div>
+                  <div class="basis-[70%]">
+                    <p
+                      class="text-lg group-hover:text-primary transition-all duration-200 font-semibold"
+                    >
+                      Product Name
+                    </p>
+                    <div class="flex items-center gap-2">
+                      <p class="font-bold">100000 MMK</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-[1px] bg-black/10 mt-16"></div>
+    </div>
+    <div
+      class="bg-secondary xl:px-32 sm:px-5 px-2 grid gap-y-10 xl:grid-cols-5 gap-4 md:grid-cols-3 py-20 text-white"
+    >
+      <div>
+        <h1 class="text-lg font-bold">Menu</h1>
+        <ul class="mt-6 gap-2 font-semibold flex flex-col">
+          <li>
+            <a href="/home.html">Home</a>
+          </li>
+          <li>
+            <a href="/home.html">Beauty</a>
+          </li>
+          <li>
+            <a href="/home.html">Clothes</a>
+          </li>
+          <li>
+            <a href="/home.html">Food</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-2">
+        <h1 class="text-lg font-bold">Popular Products</h1>
+        <div class="mt-6 grid md:grid-cols-2 gap-4">
+          <a href="/productDetail.html">
+            <div class="flex gap-4 items-center">
+              <div
+                class="w-[80px] h-[80px] shrink-0 rounded-md overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                />
+              </div>
+              <div>
+                <h1 class="font-bold">Product Name</h1>
+                <p class="text-sm text-primary font-semibold">200000 MMK</p>
+              </div>
+            </div>
+          </a>
+          <a href="/productDetail.html">
+            <div class="flex gap-4 items-center">
+              <div
+                class="w-[80px] h-[80px] shrink-0 rounded-md overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                />
+              </div>
+              <div>
+                <h1 class="font-bold">Product Name</h1>
+                <p class="text-sm text-primary font-semibold">200000 MMK</p>
+              </div>
+            </div>
+          </a>
+          <a href="/productDetail.html">
+            <div class="flex gap-4 items-center">
+              <div
+                class="w-[80px] h-[80px] shrink-0 rounded-md overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                />
+              </div>
+              <div>
+                <h1 class="font-bold">Product Name</h1>
+                <p class="text-sm text-primary font-semibold">200000 MMK</p>
+              </div>
+            </div>
+          </a>
+          <a href="/productDetail.html">
+            <div class="flex gap-4 items-center">
+              <div
+                class="w-[80px] h-[80px] shrink-0 rounded-md overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/62f51a90d298e65b94bbffcd/62f6a67c4666f047ada3ba87_image-10-shop-product-shopwave-template-p-500.png"
+                />
+              </div>
+              <div>
+                <h1 class="font-bold">Product Name</h1>
+                <p class="text-sm text-primary font-semibold">200000 MMK</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="xl:col-span-2 md:col-span-3">
+        <div class="bg-[#383E52] flex flex-col items-center p-10 rounded-xl">
+          <h1 class="text-lg font-extrabold mb-2">
+            Get 10% OFF of your first purchase
+          </h1>
+          <div
+            class="xl:w-full md:w-[50%] w-full h-[55px] bg-white rounded-full"
+          >
+            <input
+              class="w-full h-full text-black text-sm pl-6 bg-transparent border-none outline-none focus:ring-0"
+              placeholder="Enter your email address"
+            />
+          </div>
+          <!-- <ValidationError :message="errors.email" /> -->
+          <button
+            class="xl:w-full md:w-[50%] w-full h-full bg-primary rounded-full py-4 font-bold mt-3"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
