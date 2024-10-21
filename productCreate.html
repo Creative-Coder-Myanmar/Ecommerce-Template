@@ -124,16 +124,6 @@
                     />
                   </div>
                   <div class="flex flex-col">
-                    <label class="font-semibold text-sm">Category</label>
-                    <select
-                      class="w-full border-[1px] mt-2 px-3 border-black/20 focus:border-primary transition-all py-3 rounded-lg"
-                    >
-                      <option>Beauty</option>
-                      <option>Clothes</option>
-                      <option>Food</option>
-                    </select>
-                  </div>
-                  <div class="flex flex-col">
                     <label class="font-semibold text-sm">Price</label>
                     <input
                       class="outline-none px-4 focus:ring-0 border-[1px] border-black/10 py-4 rounded-lg focus:border-primary transition-all mt-2"
@@ -141,18 +131,20 @@
                       placeholder="Enter price"
                     />
                   </div>
-                  <div class="flex flex-col">
-                    <label class="font-semibold text-sm">Discount</label>
-                    <input
-                      class="outline-none px-4 focus:ring-0 border-[1px] border-black/10 py-4 rounded-lg focus:border-primary transition-all mt-2"
-                      type="text"
-                      placeholder="Enter Discount"
-                    />
-                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <label class="font-semibold text-sm">Category</label>
+                  <select
+                    class="w-full border-[1px] mt-2 px-3 border-black/20 focus:border-primary transition-all py-3 rounded-lg"
+                  >
+                    <option>Beauty</option>
+                    <option>Clothes</option>
+                    <option>Food</option>
+                  </select>
                 </div>
                 <div>
                   <div>
-                    <label label="Description" />
+                    <label class="font-semibold text-sm">Description</label>
                     <textarea
                       class="w-full border-[1px] border-black/10 py-3 px-3 rounded-[5px]"
                       placeholder="Enter Description"
